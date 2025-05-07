@@ -95,9 +95,9 @@ Este projeto tem como objetivo criar uma infraestrutura escalável e altamente d
 ### 7. Criar o Target Group
 
 - Seleciono as seguintes opções:
-![](IMAGES/targetgroup01.png)
-![](IMAGES/targetgroup012.png)
-![](IMAGES/targetgroup03.png)
+![target1](IMAGES/targetgroup01.png)
+![target2](IMAGES/targetgroup012.png)
+![target3](IMAGES/targetgroup03.png)
     - em Health Check colocamos o seguinte caminho:
 
 ```sh
@@ -113,7 +113,7 @@ Este projeto tem como objetivo criar uma infraestrutura escalável e altamente d
 - Health Check:
   - Caminho: `Targuet Group`
 
-  ![](IMAGES/loadbalancer03.png)
+  ![loadbalancer](IMAGES/loadbalancer03.png)
 
   - Porta: 80
   - Tempo entre verificações: 30s
@@ -134,7 +134,7 @@ Este projeto tem como objetivo criar uma infraestrutura escalável e altamente d
 
     - Selecione nosso Load Balancer que estará conectado ao Target Group
     ![selecione loadbalancer](IMAGES/autoscaling03.png)
-    
+
 - Configurações:
   - Mínimo: 1 instância
   - Desejado: 2 instâncias
