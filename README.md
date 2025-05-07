@@ -104,7 +104,6 @@ Este projeto tem como objetivo criar uma infraestrutura escalável e altamente d
 /wp-admin/images/wordpress-logo.svg
 ```
 
-
 ### 8. Criar o Load Balancer Application
 - Tipo: Application Load Balancer
 - Subnets: públicas
