@@ -35,7 +35,7 @@ Este projeto tem como objetivo criar uma infraestrutura escalável e altamente d
 ## ⚙️ Passos de Configuração
 
 ### 1. Criar a VPC
-![rotas vpc](images/vpc01.png)
+![rotas vpc](IMAGES/vpc01.png)
 - Subnets públicas para o Load Balancer
 - Subnets privadas para EC2 e RDS
 
@@ -94,13 +94,13 @@ Este projeto tem como objetivo criar uma infraestrutura escalável e altamente d
 
 ### 7. Criar o Target Group
 
-![](images/targetgroup01.png)
-![](images/targetgroup012.png)
-![](images/targetgroup03.png)
+![](IMAGES/targetgroup01.png)
+![](IMAGES/targetgroup012.png)
+![](IMAGES/targetgroup03.png)
     - em Health Check colocamos o seguinte caminho:
 
     ```sh
-    /wp-admin/images/wordpress-logo.svg
+    /wp-admin/IMAGES/wordpress-logo.svg
     ```
 
 
@@ -112,7 +112,7 @@ Este projeto tem como objetivo criar uma infraestrutura escalável e altamente d
 - Health Check:
   - Caminho: `Targuet Group`
 
-  ![](images/loadbalancer03.png)
+  ![](IMAGES/loadbalancer03.png)
 
   - Porta: 80
   - Tempo entre verificações: 30s
@@ -121,15 +121,15 @@ Este projeto tem como objetivo criar uma infraestrutura escalável e altamente d
 ### 9. Criar Auto Scaling Group
 - Baseado no Launch Template criado anteriormente    
     - Dê nome e escolha o template
-![inicioAutoScaling](images/autoscaling01.png)
+![inicioAutoScaling](IMAGES/autoscaling01.png)
 
 - Em Network: 
     - Escolhemos nossa VPC padrão e nossas subnets publicas 
-    ![network autoscaling](images/autoscaling02.png)   
+    ![network autoscaling](IMAGES/autoscaling02.png)   
 
 - Também: 
     - Selecione nosso Load Balancer que estará conectado ao Target Group
-    ![selecione loadbalancer](images/autoscaling03.png)
+    ![selecione loadbalancer](IMAGES/autoscaling03.png)
 - Configurações:
   - Mínimo: 1 instância
   - Desejado: 2 instâncias
@@ -137,11 +137,6 @@ Este projeto tem como objetivo criar uma infraestrutura escalável e altamente d
   - Health Check ativado (EC2 + Load Balancer)
     - Para verificar o Health Check usaremos o seguinte ping: /wp-admin/images/wordpress-logo.svg
   - Arquilo que não foi configurado, deixe como padrão
-
-
-
-
-
 
 ---
 
