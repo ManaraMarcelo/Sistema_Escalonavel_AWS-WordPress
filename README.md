@@ -112,7 +112,7 @@ Este projeto tem como objetivo criar uma infraestrutura escalável e altamente d
 - Health Check:
   - Caminho: `Targuet Group`
 
-  ![loadbalancer](IMAGES/loadbalancer03.png)
+  ![loadbalancer](/IMAGES/loadbalancer03.png)
 
   - Porta: 80
   - Tempo entre verificações: 30s
