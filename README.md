@@ -133,7 +133,7 @@ Este projeto tem como objetivo criar uma infraestrutura escalável e altamente d
 - Também: 
 
     - Selecione nosso Load Balancer que estará conectado ao Target Group
-    ![selecione loadbalancer](IMAGES/autoscaling03.png)
+    ![loadbalancer](IMAGES/autoscaling03.png)
 
 - Configurações:
   - Mínimo: 1 instância
