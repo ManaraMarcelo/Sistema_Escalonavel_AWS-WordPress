@@ -94,6 +94,7 @@ Este projeto tem como objetivo criar uma infraestrutura escalável e altamente d
 
 ### 7. Criar o Target Group
 
+- Seleciono as seguintes opções:
 ![](IMAGES/targetgroup01.png)
 ![](IMAGES/targetgroup012.png)
 ![](IMAGES/targetgroup03.png)
@@ -119,17 +120,21 @@ Este projeto tem como objetivo criar uma infraestrutura escalável e altamente d
   - Thresholds padrão (pode ser ajustado)
 
 ### 9. Criar Auto Scaling Group
-- Baseado no Launch Template criado anteriormente    
+- Baseado no Launch Template criado anteriormente   
+
     - Dê nome e escolha o template
 ![inicioAutoScaling](IMAGES/autoscaling01.png)
 
 - Em Network: 
+
     - Escolhemos nossa VPC padrão e nossas subnets publicas 
     ![network autoscaling](IMAGES/autoscaling02.png)   
 
 - Também: 
+
     - Selecione nosso Load Balancer que estará conectado ao Target Group
     ![selecione loadbalancer](IMAGES/autoscaling03.png)
+    
 - Configurações:
   - Mínimo: 1 instância
   - Desejado: 2 instâncias
@@ -144,7 +149,7 @@ Este projeto tem como objetivo criar uma infraestrutura escalável e altamente d
 
 O script de User Data prepara automaticamente o ambiente com Docker Compose ou containerd, monta o EFS e inicia o WordPress:
 
-🔗 **Link para o script `user_data.sh`:** [user_data.sh](./caminho/do/arquivo/user_data.sh)
+🔗 **Link para o script `user_data.sh`:** [user_data.sh](./userData.sh)
 
 ---
 
@@ -157,10 +162,3 @@ O script de User Data prepara automaticamente o ambiente com Docker Compose ou c
 - Utilização de EFS permite compartilhamento de arquivos entre instâncias do Auto Scaling sem perda de dados.
 
 ---
-
-## 📸 Screenshots da Arquitetura
-
-> (Você pode adicionar imagens salvas localmente, como explicado anteriormente)
-
-```markdown
-![Arquitetura AWS](assets/arquitetura-aws.png)
