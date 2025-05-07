@@ -99,9 +99,9 @@ Este projeto tem como objetivo criar uma infraestrutura escalável e altamente d
 ![](IMAGES/targetgroup03.png)
     - em Health Check colocamos o seguinte caminho:
 
-    ```sh
-    /wp-admin/IMAGES/wordpress-logo.svg
-    ```
+```sh
+/wp-admin/images/wordpress-logo.svg
+```
 
 
 ### 8. Criar o Load Balancer Application
