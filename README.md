@@ -101,8 +101,8 @@ Este projeto tem como objetivo criar uma infraestrutura escalável e altamente d
   - Selecionamos Standard create.
 - Em Engine options:   
   - Selecionamos o MySQL
-- Em Templates:  
- - Selecionamos Free Tier
+- Em Templates:    
+  - Selecionamos Free Tier
 - Configuramos um ID para o banco de dados
 - Criamos nossas credenciais (Master username e Senha)
 
