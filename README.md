@@ -22,9 +22,9 @@ Este projeto tem como objetivo criar uma infraestrutura escalável e altamente d
 
 ## 📚 Sumário
 
-- [✅ Funcionalidades](#✅-funcionalidades)
-- [📁 Estrutura de Serviços Utilizados](#📁-estrutura-de-serviços-utilizados)
-- [⚙️ Passos de Configuração](#️⚙️-passos-de-configuração)
+- [Funcionalidades](#funcionalidades)
+- [Estrutura de Serviços Utilizados](#estrutura-de-serviços-utilizados)
+- [Passos de Configuração](#passos-de-configuração)
   - [1. Criar a VPC](#1-criar-a-vpc)
   - [2. Configurar Security Groups](#2-configurar-security-groups)
   - [3. Criar o File System (EFS)](#3-criar-o-file-system-efs)
@@ -34,8 +34,11 @@ Este projeto tem como objetivo criar uma infraestrutura escalável e altamente d
   - [7. Criar o Target Group](#7-criar-o-target-group)
   - [8. Criar o Load Balancer Application](#8-criar-o-load-balancer-application)
   - [9. Criar Auto Scaling Group](#9-criar-auto-scaling-group)
-- [🐳 Docker & User Data](#-docker--user-data)
-- [🔐 Considerações de Segurança](#-considerações-de-segurança)
+- [Docker & User Data](#docker--user-data)
+- [Considerações de Segurança](#considerações-de-segurança)
+
+---
+
 
 ## ✅ Funcionalidades
 
