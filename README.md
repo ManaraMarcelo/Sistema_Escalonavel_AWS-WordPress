@@ -1,4 +1,22 @@
-# Projeto AWS: Ambiente Escalável para WordPress com EFS, RDS e Auto Scaling
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/fc8a7bf4-b1bf-45ee-84d0-8ffffbf0cec9" alt="Topo AWS WordPress" width="600">
+</p>
+
+<h1 align="center">Sistema Escalonável AWS com WordPress</h1>
+
+<p align="center">
+  Deploy automatizado com escalabilidade, persistência de dados, segurança e balanceamento de carga usando AWS, Docker, WordPress e MySQL.
+</p>
+
+<br>
+
+<div align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=aws,docker,linux,wordpress,mysql" alt="Tecnologias" />
+  </a>
+</div>
+
+---
 
 Este projeto tem como objetivo criar uma infraestrutura escalável e altamente disponível na AWS para hospedar uma aplicação WordPress com persistência de dados e automação completa, utilizando EC2, Load Balancer, EFS, RDS e Auto Scaling.
 
@@ -90,7 +108,11 @@ Este projeto tem como objetivo criar uma infraestrutura escalável e altamente d
 - Selecionamos nosso SG-RDS:
 ![databaseSG](/IMAGES/databaseSG.png)
 
-- Configurar endpoint, nome do banco, usuário e senha
+- Deixe o database com autenticação por senha
+- Monitoramento como Standart
+- O restante deixe como padrão e adicione a seguinte configuração: 
+![databaseName](/IMAGES/databaseName.png)
+que é o nome usado em seu `user_Data`.
 
 ### 5. Criar a Instância EC2 base
 - Utilizar AMI Ubuntu
