@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/fc8a7bf4-b1bf-45ee-84d0-8ffffbf0cec9" alt="Topo AWS WordPress" width="600">
+  <img src="https://github.com/ManaraMarcelo/Sistema_Escalonavel_AWS-WordPress/blob/main/IMAGES/logo_wordpress_aws.png" width="600">
 </p>
 
 <h1 align="center">Sistema Escalonável AWS com WordPress</h1>
