@@ -51,7 +51,7 @@ Este projeto tem como objetivo criar uma infraestrutura escalável e altamente d
 ## ⚙️ Passos de Configuração
 
 ### 1. Criar a VPC
-![logo_wordpress_aws](https://github.com/user-attachments/assets/1d9df0ed-3fe8-44b6-8360-ab74bb23fbcb)
+![vpcroutes](/IMAGES/vpc01.png)
 
 - Subnets públicas para o Load Balancer
 - Subnets privadas para EC2 e RDS
