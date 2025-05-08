@@ -72,7 +72,24 @@ Este projeto tem como objetivo criar uma infraestrutura escalável e altamente d
 - Montado em todas as instâncias EC2 via Docker
 
 ### 4. Criar o banco de dados RDS (MySQL)
-- Na mesma VPC e subnets privadas
+- Em Choose a database creation method:  
+  - Selecionamos Standard create.
+- Em Engine options:   
+  - Selecionamos o MySQL
+- Em Templates:  
+ - Selecionamos Free Tier
+- Configuramos um ID para o banco de dados
+- Criamos nossas credenciais (Master username e Senha)
+
+- Outros: 
+![t3microDatabase](/IMAGES/databaset3micro.png)
+
+- Selecionamos nossa vpc:  
+![vpcdatabase](/IMAGES/databasevpc.png)
+
+- Selecionamos nosso SG-RDS:
+![databaseSG](/IMAGES/databaseSG.png)
+
 - Configurar endpoint, nome do banco, usuário e senha
 
 ### 5. Criar a Instância EC2 base
