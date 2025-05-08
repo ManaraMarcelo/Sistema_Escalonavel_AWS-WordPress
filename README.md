@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/ManaraMarcelo/Sistema_Escalonavel_AWS-WordPress/blob/main/IMAGES/logo_wordpress_aws.png" width="600" style="border-radius: 10%;">
+  <img src="https://github.com/ManaraMarcelo/Sistema_Escalonavel_AWS-WordPress/blob/main/IMAGES/logo_wordpress_aws.png" width="600">
 </p>
 
 <h1 align="center">Sistema Escalonável AWS com WordPress</h1>
