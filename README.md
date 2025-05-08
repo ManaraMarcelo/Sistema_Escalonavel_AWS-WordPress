@@ -42,19 +42,18 @@ Este projeto tem como objetivo criar uma infraestrutura escalável e altamente d
   - Banco de dados do WordPress
 - **Amazon EFS**
   - Armazenamento de arquivos persistente e compartilhado
-- **Elastic Load Balancer (Classic)**
+- **Elastic Load Balancer**
   - Acesso externo ao site WordPress
 - **Auto Scaling Group**
   - 2 instâncias (padrão, podendo variar de 1 a 3) com verificação de saúde e alta disponibilidade
-
 
 ## ⚙️ Passos de Configuração
 
 ### 1. Criar a VPC
 ![vpcroutes](/IMAGES/vpc01.png)
 
-- Subnets públicas para o Load Balancer
-- Subnets privadas para EC2 e RDS
+- Subnets públicas para as EC2 e Load Balancer
+- Subnets privadas para EFS e RDS
 
 ### 2. Configurar Security Groups
 - SG do ALB (Load Balancer):
@@ -81,7 +80,7 @@ Este projeto tem como objetivo criar uma infraestrutura escalável e altamente d
 - SG do EFS:
     - inbound rules:   
     NFS -> TCP -> 2049 -> SG-EC2
-    - outbound rules: 
+    - outbound rules:    
     ALL trafic -> 0.0.0.0/0
 
 ### 3. Criar o File System (EFS)
@@ -191,7 +190,16 @@ que é o nome usado em seu `user_Data`.
     - Para verificar o Health Check usaremos o seguinte ping: /wp-admin/images/wordpress-logo.svg
   - Arquilo que não foi configurado, deixe como padrão
 
----
+## 💪 Finalizado
+
+**Após todo esse processo seu projeto deve funcionar sozinho, direcionando através do Load Balancer para as Instâncias criadas automaticamente pelo Auto Scaling.**
+
+**Para acessar o seu WordPress acesse o link de DNS gerado pelo Load Balancer, pois essa é nossa rota de entrada.**
+
+**Para fins de testes, tente adicionar uma imagem dentro de seu wordpress por uma instância, derrube ela e veja através de outra se sua imagem ainda está por lá. Se sim, o EFS está funcionando perfeitamente.**
+
+**Seu WordPress já está funcionando perfeitamente, você pode configurar e customizar como quiser que os dados serão persistidos pelo RDS e pelo EFS.**
+
 
 ## 🐳 Docker & User Data
 
