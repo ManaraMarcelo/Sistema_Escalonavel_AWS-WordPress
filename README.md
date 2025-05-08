@@ -29,7 +29,6 @@ Este projeto tem como objetivo criar uma infraestrutura escalável e altamente d
 - **Deploy automatizado via script de inicialização (User Data)**
 - **Segurança com Security Groups bem definidos**
 
----
 
 ## 📁 Estrutura de Serviços Utilizados
 
@@ -48,7 +47,6 @@ Este projeto tem como objetivo criar uma infraestrutura escalável e altamente d
 - **Auto Scaling Group**
   - 2 instâncias (padrão, podendo variar de 1 a 3) com verificação de saúde e alta disponibilidade
 
----
 
 ## ⚙️ Passos de Configuração
 
