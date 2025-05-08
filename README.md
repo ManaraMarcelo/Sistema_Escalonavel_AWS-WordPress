@@ -22,7 +22,7 @@ Este projeto tem como objetivo criar uma infraestrutura escalável e altamente d
 
 ## 📚 Sumário
 
-- [Funcionalidades](#funcionalidades)
+- [✅ Funcionalidades](#✅-funcionalidades)
 - [Estrutura de Serviços Utilizados](#estrutura-de-serviços-utilizados)
 - [Passos de Configuração](#passos-de-configuração)
   - [1. Criar a VPC](#1-criar-a-vpc)
