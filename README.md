@@ -85,8 +85,16 @@ Este projeto tem como objetivo criar uma infraestrutura escalável e altamente d
     ALL trafic -> 0.0.0.0/0
 
 ### 3. Criar o File System (EFS)
-- Integrado com as subnets privadas
-- Montado em todas as instâncias EC2 via Docker
+
+- Insira um nome para o seu EFS: 
+![efsName](/IMAGES/efsName.png)
+
+- Selecione sua VPC e certifique-se de que estão selecionadas as subnets privadas e o SG-EFS nos security groups: 
+![efssubnets](/IMAGES/efs02.png)
+
+- Customize as demais como desejar, para esse projeto nada mais foi alterado.
+
+- O EFS será montado em todas as EC2 via User_Data posteriormente.
 
 ### 4. Criar o banco de dados RDS (MySQL)
 - Em Choose a database creation method:  
@@ -113,7 +121,7 @@ Este projeto tem como objetivo criar uma infraestrutura escalável e altamente d
 ![databaseName](/IMAGES/databaseName.png)
 que é o nome usado em seu `user_Data`.
 
-### 5. Criar a Instância EC2 base
+### 5. Criar a Instância EC2 base - Para testes
 - Utilizar AMI Ubuntu
 - Adicionar script no **User Data** para:
   - Instalar Docker ou containerd
@@ -121,6 +129,7 @@ que é o nome usado em seu `user_Data`.
   - Rodar container do WordPress com variáveis de ambiente do RDS
   - Criar usuário para não usar o ubuntu com permissão root
 - User data utilizado: [`userData.sh`](./userData.sh)
+- Conecte-se via SSH e verifique se o Docker está funcionando e se nosso projeto foi lançado.
 
 ### 6. Criar Template de Lançamento (Launch Template)
 - Baseado na instância EC2 configurada
@@ -128,6 +137,8 @@ que é o nome usado em seu `user_Data`.
   - AMI ubuntu
   - Par de chaves (opcional caso precise conectar via SSH)
   - Security Group da EC2 (SG-EC2)
+  - Não selecionar subnets (Será selecionado no Auto Sacaling)
+  - Deixar IP público das instâncias ativado
   - Script de **User Data**
 
 ### 7. Criar o Target Group
@@ -195,6 +206,7 @@ O script de User Data prepara automaticamente o ambiente com Docker Compose ou c
 - Nenhuma instância EC2 fica com IP público exposto diretamente.
 - Acesso ao WordPress ocorre **somente via Load Balancer**.
 - Acesso por SSH restrito apenas ao IP do desenvolvedor.
+- É criado um 'devuser' dentro das EC2 para o uso do Docker, evitando o usuário padrão com permissões Root.
 - Separação de Security Groups por função (EC2, ALB, EFS, RDS).
 - Utilização de EFS permite compartilhamento de arquivos entre instâncias do Auto Scaling sem perda de dados.
 
